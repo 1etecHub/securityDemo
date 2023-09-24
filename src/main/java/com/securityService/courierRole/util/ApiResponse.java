@@ -32,4 +32,8 @@ public class ApiResponse<T> {
         this.message = message;
         this.httpStatus = httpStatus;
     }
+
+    public boolean isSuccess() {
+        return data != null && (message == null || message.isEmpty());
+    }
 }
